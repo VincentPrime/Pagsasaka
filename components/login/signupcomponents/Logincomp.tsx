@@ -42,7 +42,7 @@ export function LoginForm({
                   <Input
                     id="email"
                     type="email"
-                    placeholder="PHONENUMBER / USERNAME / EMAIL"
+                    placeholder="Number / Username / Email"
                     required
                     className="py-5"
                   />
@@ -63,6 +63,7 @@ export function LoginForm({
                         type={showPassword ? "text" : "password"}
                         required
                         className="pr-10 py-5"
+                        placeholder="Password"
                       />
                       <button
                         type="button"
@@ -78,9 +79,7 @@ export function LoginForm({
                 </Button>
               </div>
               
-              <span className="relative z-10 px-2 text-green-400">
-                  Or continue with
-                </span>
+            
               <div className="text-center text-sm">
                 Don&apos;t have an account?{" "}
                 <button

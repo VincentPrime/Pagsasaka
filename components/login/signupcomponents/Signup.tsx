@@ -40,6 +40,7 @@ export function SignupForm({
                         id="email"
                         type="email"
                         required
+                        placeholder="Firstname"
                     />
                     </div>
                     <div className="grid gap-3">
@@ -48,6 +49,7 @@ export function SignupForm({
                         id="email"
                         type="email"
                         required
+                        placeholder="Lastname"
                     />
                     </div>
                 </div>
@@ -102,6 +104,7 @@ export function SignupForm({
                         type={showPassword ? "text" : "password"}
                         required
                         className="pr-10"
+                        placeholder="Password"
                       />
                       <button
                         type="button"
@@ -124,6 +127,7 @@ export function SignupForm({
                         type={showRepassword ? "text" : "password"}
                         required
                         className="pr-10"
+                        placeholder="Re-Enter Password"
                       />
                       <button
                         type="button"
