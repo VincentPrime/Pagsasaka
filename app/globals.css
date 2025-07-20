@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -134,5 +136,6 @@ input:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
 
 

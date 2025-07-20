@@ -86,7 +86,8 @@ export default function Landingpage() {
                 more connected food system for everyone.
             </h1>
 
-            <a href="/loginform"><Button className="mt-2 cursor-pointer">JOIN NOW!</Button></a>
+            <a href="/loginform" className="mr-2"><Button className="mt-2 cursor-pointer">Sign in</Button></a>
+            <a href="/loginform"><Button className="mt-2 cursor-pointer">Sign up</Button></a>
           </div>
         </main>
       </div>
