@@ -133,34 +133,29 @@ useEffect(() => {
                         
             </main>
             
-<div className="flex justify-center px-4">
-  <div className="w-full max-w-4xl overflow-hidden rounded-2xl">
-    {/* Image container with rounded top only */}
-    <div className="relative h-[500px] sm:h-[700px] rounded-t-2xl overflow-hidden">
-      <Image
-        src="/happyfarmer.jpeg"
-        alt="Happy Farmer"
-        fill
-        className="object-cover"
-      />
-    </div>
-
-    {/* Text container with rounded bottom only */}
-    <div className="bg-[#608c54] text-white p-4 rounded-b-2xl">
-      <p className="text-lg font-semibold">
-        Meet our farmers, the champions behind the exceptional food we cherish.
-        Their dedication empowers us to thrive as a community, and we are proud
-        to support their commitment to quality and sustainability.
-        <a href="#" className="flex justify-end items-center gap-1 mt-2">
-          Read more
-          <Ellipsis className="animate-bounce" />
-        </a>
-      </p>
-    </div>
-  </div>
-</div>
-
-
+              <div className="flex justify-center px-4">
+                <div className="w-full max-w-4xl overflow-hidden rounded-2xl">
+                  <div className="relative h-[500px] sm:h-[700px] rounded-t-2xl overflow-hidden">
+                    <Image
+                      src="/happyfarmer.jpeg"
+                      alt="Happy Farmer"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div className="bg-[#608c54] text-white p-4 rounded-b-2xl">
+                    <p className="text-lg font-semibold">
+                      Meet our farmers, the champions behind the exceptional food we cherish.
+                      Their dedication empowers us to thrive as a community, and we are proud
+                      to support their commitment to quality and sustainability.
+                      <a href="#" className="flex justify-end items-center gap-1 mt-2">
+                        Read more
+                        <Ellipsis className="animate-bounce" />
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              </div>
 
         <Card className="rounded-none bg-[#608c54] text-white mt-40">
               <CardContent className="flex flex-col md:flex-row gap-7 p-4">

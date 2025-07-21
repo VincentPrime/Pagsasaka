@@ -1,18 +1,11 @@
 "use client"
-import Link from "next/link"
-import { useRouter } from "next/navigation"
 
+import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { Eye, EyeOff } from "lucide-react"
 import { useState } from "react"
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardContent,CardHeader,CardTitle,} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
@@ -23,6 +16,10 @@ export function LoginForm({
 
   const [showPassword, setShowPassword] = useState(false)
   const router = useRouter()
+
+  const [Adminmail, setAdminmail] = useState("")
+  const [AdminPass, setAdminpass] = useState("")
+
 
 
   return (
@@ -41,7 +38,7 @@ export function LoginForm({
                   <Label htmlFor="email">Email</Label>
                   <Input
                     id="email"
-                    type="email"
+                    type="text"
                     placeholder="Number / Username / Email"
                     required
                     className="py-5"
@@ -74,7 +71,7 @@ export function LoginForm({
                       </button>
                     </div>
                   </div>
-                <Button type="submit" className="w-full">
+                <Button className="w-full" >
                   Login
                 </Button>
               </div>
