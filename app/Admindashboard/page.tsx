@@ -1,3 +1,4 @@
+import SplitText from "@/components/animations/SplitText"
 import { AppSidebar } from "@/components/SidebarComp/app-sidebar"
 import { SheetDemo } from "@/components/Sidebarsettings/side-bar"
 import {
@@ -20,7 +21,7 @@ import Image from "next/image"
 export default function Admindashboard() {
   return (
     <SidebarProvider>
-      <AppSidebar />
+      <AppSidebar  />
       <SidebarInset>
         <header className="bg-[#285A19] text-white flex justify-between px-5 h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
@@ -32,8 +33,12 @@ export default function Admindashboard() {
             <Breadcrumb>
               <BreadcrumbList>
                 <BreadcrumbItem >
-                  <BreadcrumbPage className="text-white font-extrabold text-2xl">Welcome to Admin Dashboard</BreadcrumbPage>
-                   
+                  <BreadcrumbPage>
+                      <SplitText
+                        text="Welcome to Admin list"
+                        className="text-2xl font-extrabold text-center text-white"
+                      />
+                  </BreadcrumbPage>    
                 </BreadcrumbItem>
               </BreadcrumbList>
             </Breadcrumb>

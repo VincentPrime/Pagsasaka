@@ -5,6 +5,8 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
 import { useEffect,useState } from "react"
+import SplitText from "@/components/animations/SplitText";
+import ClickSpark from "@/components/animations/cursoranimation";
 export default function Landingpage() {
 
   const [scrolled, setScrolled] = useState(false);
@@ -42,8 +44,8 @@ export default function Landingpage() {
 
         {/* Desktop Nav */}
         <ul className="hidden sm:flex gap-8 font-bold">
-          <li><a href="/Landingpage" className=" text-[#32ed6d] hover:text-[#03a336] ">Home</a></li>
-          <li><a href="/Aboutus" className="hover:text-[#03a336]">About us</a></li>
+          <li><a href="/Landingpage" className=" text-[#32ed6d] hover:text-[#03a336] "><ClickSpark>Home</ClickSpark></a></li>
+          <li><a href="/Aboutus" className="hover:text-[#03a336]"> <ClickSpark>About us</ClickSpark> </a></li>
         </ul>
 
         {/* Mobile Sheet Menu */}
@@ -66,19 +68,22 @@ export default function Landingpage() {
         {/* Hero Section */}
         <main className="relative w-full h-svh">
           {/* Background Image */}
-          <Image
-            src="/MAGSASAKA.jpg"
-            alt="nagtatanim"
-            fill
-            className="object-cover"
-            priority
-          />
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="/farminglanding.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           <div className="absolute inset-0 bg-black/50 backdrop-brightness-75 z-10"></div>
 
           {/* Optional content on top of image */}
           <div className="absolute inset-0 z-20 m-70 text-white text-center">
             <h1 className="text-7xl font-extrabold">
-                Food's Journey Connecting Farmers andConsumers for a Healthier Future
+               Food's Journey Connecting Farmers and Consumers for a Healthier Future
             </h1>
             <h1>
                 We bridge the gap between those who grow our
@@ -86,8 +91,8 @@ export default function Landingpage() {
                 more connected food system for everyone.
             </h1>
 
-            <a href="/loginform" className="mr-2"><Button className="mt-2 cursor-pointer">Sign in</Button></a>
-            <a href="/loginform"><Button className="mt-2 cursor-pointer">Sign up</Button></a>
+            <a href="/loginform" className="mr-2"><Button className="mt-2 cursor-pointer"> <ClickSpark>Sign in</ClickSpark> </Button></a>
+            <a href="/loginform"><Button className="mt-2 cursor-pointer"><ClickSpark>Sign up</ClickSpark> </Button></a>
           </div>
         </main>
       </div>

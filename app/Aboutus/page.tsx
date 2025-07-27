@@ -1,11 +1,14 @@
 "use client"
+
 import { Card, CardContent, CardDescription, CardHeader } from "@/components/ui/card"
 import Image from "next/image"
 import { useEffect,useState } from "react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import { Quote,Menu,Ellipsis,MapPinned,Phone,Mail} from "lucide-react";
+import { Quote,Menu,Ellipsis,MapPinned,Phone,Mail, Car} from "lucide-react";
 import {Tooltip, TooltipTrigger, TooltipContent, TooltipProvider} from "@/components/ui/tooltip"
-import { Button } from "@/components/ui/button"
+import ClickSpark from "@/components/animations/cursoranimation"
+
+
 
 
 const cardContents = [
@@ -25,6 +28,8 @@ const cardContents = [
     extra: '-Juan, Dela Cruz, Magsasaka',
   }
 ]
+
+
 
 export default function Aboutus(){
 
@@ -79,8 +84,8 @@ useEffect(() => {
 
         {/* Desktop Nav */}
         <ul className="hidden sm:flex gap-8 font-bold">
-          <li><a href="/Landingpage" className="hover:text-[#03a336] ">Home</a></li>
-          <li><a href="/Aboutus" className="text-[#32ed6d] hover:text-[#03a336]">About us</a></li>
+          <li><a href="/Landingpage" className="hover:text-[#03a336] "><ClickSpark>Home</ClickSpark></a></li>
+          <li><a href="/Aboutus" className="text-[#32ed6d] hover:text-[#03a336]"><ClickSpark>About us</ClickSpark></a></li>
         </ul>
 
         {/* Mobile Sheet Menu */}
@@ -119,9 +124,9 @@ useEffect(() => {
 
                   {/* Text Content */}
                     <div className="absolute inset-0 z-20 flex items-center justify-center text-white text-center w-full p-4 ">
-                      <Card className="bg-[#608c54] text-white w-full max-w-xl p-4 border-none">
-                        <h1 className="text-4xl font-extrabold">About us</h1>
-                        <h1 className="font-bold">
+                      <Card className="bg-[#00721e] text-white w-full max-w-5xl px-4 py-6 sm:px-40 sm:py-10 border-none">
+                        <h1 className="text-2xl sm:text-4xl font-extrabold">About us</h1>
+                        <h1 className="font-bold text-sm sm:text-base">
                           Pagsasaka connects farmers directly with consumers, ensuring fair pricing
                           and access to fresh produce, livestock, and farming tools. Our platform
                           supports sustainable farming while empowering communities to make
@@ -143,7 +148,7 @@ useEffect(() => {
                       className="object-cover"
                     />
                   </div>
-                  <div className="bg-[#608c54] text-white p-4 rounded-b-2xl">
+                  <div className="bg-[#00721e] text-white p-4 rounded-b-2xl">
                     <p className="text-lg font-semibold">
                       Meet our farmers, the champions behind the exceptional food we cherish.
                       Their dedication empowers us to thrive as a community, and we are proud
@@ -157,7 +162,7 @@ useEffect(() => {
                 </div>
               </div>
 
-        <Card className="rounded-none bg-[#608c54] text-white mt-40">
+        <Card className="rounded-none bg-[#00721e] text-white mt-40">
               <CardContent className="flex flex-col md:flex-row gap-7 p-4">
                   <Image
                     src="/farming.png"
@@ -180,12 +185,12 @@ useEffect(() => {
 
        <Card className="min-h-screen border-none rounded-none  justify-center items-center">
           <CardContent className="flex flex-col md:flex-row gap-6 md:gap-20 items-center w-full max-w-6xl">
-            <Card className="px-5 py-10 bg-[#608c54] text-white font-medium text-2xl w-full md:w-60 flex justify-center">
+            <Card className="px-5 py-10 bg-[#00721e] text-white font-medium text-2xl w-full md:w-60 flex justify-center">
               <p>
                 What our Clients Say about Pagsasaka
               </p>
             </Card>
-            <Card className="w-full md:w-[800px] h-100 bg-[#608c54] text-white font-medium text-2xl p-5 flex flex-col justify-center gap-2" >
+            <Card className="w-full md:w-[800px] h-100 bg-[#00721e] text-white font-medium text-2xl p-5 flex flex-col justify-center gap-2" >
             <p className="text-lg font-bold">{title}</p>
             <p>{description}</p>
             <p className="text-sm text-white">{extra}</p>
@@ -194,20 +199,101 @@ useEffect(() => {
        </Card>
 
 
-      <Card className="min-h-screen border rounded-none">
-          <CardHeader className="text-center">
-            <p className="font-medium text-5xl">
-              Introducing the leader steering the
+      <Card className="min-h-screen border-none rounded-none">
+          <CardHeader className="text-center px-4 sm:px-10">
+          <p className="font-bold text-3xl sm:text-5xl">  
+            Introducing the leader steering the
               vision that fuels our mission.
-            </p>
-          <CardDescription className="font-bold text-2xl text-black">
+          </p>
+          </CardHeader>    
+    
+          <CardDescription className="text-center px-4 sm:px-20 mb-8">
+          <p className="text-base sm:text-[20px]">
             We are a diverse team with roots in various farming communities, each contributing unique perspectives, experiences,
             and expertise. This rich blend of backgrounds allows us to bring innovative solutions that bridge the gap between
             farmers and consumers, creating a more efficient and sustainable agricultural marketplace.
+     
+          </p>
           </CardDescription>
-          </CardHeader>
-      </Card>
 
+          <CardContent className="flex flex-col">
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+              <Card className="text-center p-5 border-none shadow-none">
+              <div className="border-5 border-[#00721e] w-70 h-70 overflow-hidden rounded-full ">
+                <Image
+                src="/kurtt.png"
+                alt="kurt"
+                width={900}
+                height={500}
+                /> 
+              </div>
+              <div className="w-full h-2 bg-[#00721e] "></div>
+                <CardHeader className="font-bold text-[20px] ">ARCIGA, kurt Steven</CardHeader>
+                <CardDescription >Full Stack Developer</CardDescription>
+              </Card>
+
+              <Card  className="text-center p-5 border-none shadow-none">
+              <div className="border-5 border-[#00721e] w-70 h-70 overflow-hidden rounded-full bg-black ">
+                  <Image
+                src="/gar.png"
+                alt="milbert"
+                width={900}
+                height={900}
+                />  
+              </div>
+              <div className="w-full h-2 bg-[#00721e] "></div>
+                <CardHeader className="font-bold text-[20px]">GARINGA, Milbert</CardHeader>
+                <CardDescription>Full Stack Developer</CardDescription>
+              </Card>
+
+              <Card  className="text-center p-5 border-none shadow-none">
+              <div className="border-5 border-[#00721e] w-70 h-70 overflow-hidden rounded-full ">
+                  <Image
+                src="/norman.png"
+                alt="norman"
+                width={900}
+                height={500}
+                /> 
+              </div>
+              <div className="w-full h-2 bg-[#00721e] "></div>
+                <CardHeader className="font-bold text-[20px]">PARAISO, Norman</CardHeader>
+                <CardDescription>Backend Developer</CardDescription>
+              </Card>
+            </div>
+
+
+            <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
+              <Card  className="text-center p-5 border-none shadow-none">
+              <div className="border-5 border-[#00721e] w-70 h-70 overflow-hidden rounded-full ">
+                <Image
+                src="/vincent.png"
+                alt="vincent"
+                width={900}
+                height={160}
+                /> 
+              </div>
+              <div className="w-full h-2 bg-[#00721e] "></div>
+                <CardHeader className="font-bold text-[20px]">Fillar, Vincent</CardHeader>
+                <CardDescription>Frontend Developer</CardDescription>
+              </Card>
+
+              <Card  className="text-center p-5 border-none shadow-none">
+              <div className="border-5 border-[#00721e] w-70 h-70 overflow-hidden rounded-full ">
+                <Image
+                src="/romil.png"
+                alt="nomil"
+                width={900}
+                height={160}
+                /> 
+              </div>
+              <div className="w-full h-2 bg-[#00721e] "></div>
+                <CardHeader className="font-bold text-[20px]">Fillar, Vincent</CardHeader>
+                <CardDescription>Frontend Developer</CardDescription>
+              </Card>
+
+            </div>
+          </CardContent>
+      </Card>
 
 
 
@@ -222,7 +308,7 @@ useEffect(() => {
                 <p className="text-sm">Farmers & Consumers</p>
               </span>
             </div>
-            <p className="mt-2">Pagsasaka connects farmers with consumers for buying and selling fresh, local produce, supporting sustainable agriculture.</p>
+            <p className="mt-2 ">Pagsasaka connects farmers with consumers for buying and selling fresh, local produce, supporting sustainable agriculture.</p>
            
             <div className="flex gap-2 mt-5">
              <Tooltip>

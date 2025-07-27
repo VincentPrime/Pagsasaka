@@ -2,12 +2,12 @@
 
 import { useRouter } from "next/navigation"
 import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
 import { Eye, EyeOff } from "lucide-react"
 import { useState } from "react"
 import { Card, CardContent,CardHeader,CardTitle,} from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Button } from "@/components/ui/button"
 
 export function LoginForm({
   className,
@@ -21,12 +21,19 @@ export function LoginForm({
   const [AdminPass, setAdminpass] = useState("")
 
 
+   const Loginbutton = (e: React.MouseEvent<HTMLButtonElement>) =>{
+    e.preventDefault();
+    
+    if(Adminmail === "vincent" && AdminPass === "vincent"){
+      router.push("/Admindashboard")
+    }
+  }
 
   return (
     <div className={cn("flex flex-col gap-6", className)} {...props}>
       <Card className="bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
         <CardHeader className="text-center">
-          <CardTitle className="text-4xl font-extrabold">LOG IN</CardTitle>
+          <CardTitle className="text-4xl font-extrabold text-white">LOG IN</CardTitle>
          
         </CardHeader>
         <CardContent>
@@ -35,13 +42,14 @@ export function LoginForm({
     
               <div className="grid gap-6">
                 <div className="grid gap-3">
-                  <Label htmlFor="email">Email</Label>
+                  <Label>Email</Label>
                   <Input
-                    id="email"
                     type="text"
                     placeholder="Number / Username / Email"
                     required
                     className="py-5"
+                    value={Adminmail}
+                    onChange={(e) => setAdminmail(e.target.value)}
                   />
                 </div>
                 <div className="grid gap-3">
@@ -61,6 +69,8 @@ export function LoginForm({
                         required
                         className="pr-10 py-5"
                         placeholder="Password"
+                        value={AdminPass}
+                        onChange={(e) => setAdminpass(e.target.value)}
                       />
                       <button
                         type="button"
@@ -71,7 +81,7 @@ export function LoginForm({
                       </button>
                     </div>
                   </div>
-                <Button className="w-full" >
+                <Button className="w-full" onClick={Loginbutton}>
                   Login
                 </Button>
               </div>

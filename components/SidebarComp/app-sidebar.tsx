@@ -27,7 +27,7 @@ const data = {
     },
     {
       title: "Riderlist",
-      url: "#",
+      url: "/Riderlist",
       icon: "/motorbike.png",
     },
   ],

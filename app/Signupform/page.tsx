@@ -65,14 +65,17 @@ export default function Signupform(){
 
            <main className="relative w-full h-svh">
           {/* Background Image */}
-          <Image
-            src="/Farmerhappy.jpg"
-            alt="nagtatanim"
-            fill
-            className="object-cover"
-            priority
-          />
-          <div className="absolute inset-0 bg-black/30 backdrop-brightness-75 z-10"></div>
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 w-full h-full object-cover z-0"
+            >
+              <source src="/farming.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          <div className="absolute inset-0 bg-black/20  z-10"></div>
 
           {/* Optional content on top of image */}
           <div className="absolute inset-0 z-20 flex items-center justify-center text-white text-center w-full mt-15 p-5">

@@ -24,7 +24,7 @@ export function SheetDemo() {
       <SheetTrigger asChild>
         <div className="relative w-fit">
           <Image
-            src="/images/baby.jpeg"
+            src="/farmer.png"
             alt="baby"
             width={50}
             height={50}
@@ -35,14 +35,14 @@ export function SheetDemo() {
       <SheetContent className="flex flex-col">
         <SheetHeader className="items-center mt-10 pb-10 border-b-2 border-dotted">
           <Image
-            src="/images/baby.jpeg"
+            src="/farmer.png"
             alt="baby"
             width={100}
             height={100}
             className="rounded-full border"
           />
-          <SheetTitle>Maxene Dionisio</SheetTitle>
-          <SheetDescription>Maxenedionisio@.com</SheetDescription>
+          <SheetTitle>Admin</SheetTitle>
+          <SheetDescription>Pagsasaka@gmail.com-</SheetDescription>
         </SheetHeader>
 
         <div className="grid flex-1 auto-rows-min gap-6 px-4 pt-4">
